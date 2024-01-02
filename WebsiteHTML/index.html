@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Zuckerman Resume</title>
+    <link rel="shortcut icon" type="image/x-icon" href="C:\Users\Jayme\Downloads\QTCPicture.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="background__circle">
+        <span></span>
+    </div>
+    <nav>
+        <div class="menu__toggle">
+
+            <!-- Checkbox -->
+            <input type="checkbox">
+            
+            <!-- 3 bars -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- Menu items -->
+            <ul class="menu__link" style="font-size:30px">
+                <a href="#top__of__main__page"><li>Home</li></a>
+                <a href="#education__section"><li>Education</li></a>
+                <a href=""><li>Projects</li></a>
+                <a href=""><li>Experience</li></a>
+                <a href="#contact__section"><li>Contacts</li></a>
+            </ul>
+        </div>
+    </nav>
+    <div class="main__header" id="top__of__main__page">
+        <div class="main__header_background__image" style="background-size: cover; background-position: center;"></div>
+        <img src="C:\Users\Jayme\Downloads\QTCPicture.jpg" alt="Image of James Zuckerman" class="main__header__profile__image" style="width: 300px; height: 300px; object-fit: cover; object-position: 0% 5%; margin-top: 300px;">
+        <h1>
+            James Zuckerman
+        </h1>
+        <p>
+            <b>Meet James:</b> A student athlete at Vassar College majoring in Computer Science and Physics with a minor in Economics. <br>
+            Discover his projects and experience below.
+        </p>
+    </div>
+
+    <div class="education__section" id="education__section">
+        <div class="education__section__image" style="background-size: cover; background-position: center;"></div>
+        <h1>
+            Education
+        </h1>
+        <p>
+            James is a current Sophomore at Vassar College. 
+        </p>
+    </div>
+
+    <div class="get__in__touch" id="contact__section">
+        <div class="contact__background__image" style="background-size: cover; background-position: center;"></div>
+        <h1>
+            My links:
+        </h1><br>
+        <!-- Add font awesome icons -->
+        <a class="fa fa-linkedin fa-2x" href="https://www.linkedin.com/in/jameszuckerman/ " target="_blank" style="display:inline; cursor: pointer;"></a>
+        <a href="https://github.com/jzuckerman1" class="fa fa-github fa-2x" target="_blank" style="display:inline;"></a>
+        <a href="mailto:jameszuckerman3@gmail.com" class="fa fa-envelope fa-2x" target="_blank" style="display:inline;"></a>
+        <br>
+        <p>
+            Currently interested in Summer 2024 Internship opportunities.
+        </p>
+        <div class="form__container">
+            <form action="https://formsubmit.co/jameszuckerman3@gmail.com" method="POST">
+                <h2>Contact me:</h2><br>
+                <input type="text" id="name" name="name" placeholder="Full Name" onfocus="this.placeholder=''" onblur="this.placeholder='Full Name'" required>
+                <input type="text" id="name" name="email" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'" required><br>
+                <textarea name="Message" placeholder="Message" required onfocus="this.placeholder=''" onblur="this.placeholder='Message'" maxlength="1024" rows=5 cols=120 required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
