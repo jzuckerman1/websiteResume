@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        James Zuckerman Resume
+    </title>
+    <style>
+        .tab {
+            display: inline-block;
+            margin-left: 40px;
+        }
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="public/assets/professional_image.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="main.js"></script>
+    <!-- tiny slider library -->
+    <script src="https://cdn.jsdelivr.net/npm/tiny-slider@2.9.2/dist/min/tiny-slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+</head>
+<body>
+    <div class="background__circle">
+        <span></span>
+    </div>
+    <nav>
+        <div class="menu__toggle">
+
+            <!-- Checkbox -->
+            <input type="checkbox" id="hamburger__menu">
+            
+            <!-- 3 bars -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- Menu items -->
+            <ul class="menu__link" style="font-size:30px">
+                <a href="#top__of__main__page"><li>Home</li></a>
+                <a href="#education__section"><li>Education</li></a>
+                <a href="#projects__section"><li>Projects</li></a>
+                <a href=""><li>Experience</li></a>
+                <a href="#contact__section"><li>Contacts</li></a>
+            </ul>
+        </div>
+    </nav>
+    <div class="main__header" id="top__of__main__page">
+        <div class="main__header_background__image" style="background-size: cover; background-position: center;"></div>
+        <img src="public/assets/professional_image.jpg" alt="Image of James Zuckerman" class="main__header__profile__image" style="width: 300px; height: 300px; object-fit: cover; object-position: 0% 5%; margin-top: 300px;">
+        <h1>
+            James Zuckerman
+        </h1>
+        <p>
+            <b>Meet James:</b> A student athlete at Vassar College majoring in Computer Science and Physics with a minor in Economics. <br>
+            Discover his projects and experience below.
+        </p>
+    </div>
+
+    <div class="education__section" id="education__section">
+        <div class="education__section__image" style="background-size: cover; background-position: center;"></div>
+        <h1>
+            Education
+        </h1>
+        <div class="vassar__education__section">
+            <div class="vassar__education__left__side">
+                <h2>Vassar College</h2>
+                <p>
+                    <span class="tab"></span>B.A. in Physics and Computer Science with a minor in Economics.
+                </p>
+            </div>
+            <div class="vassar__education__right__side">2022-2026</div>
+        </div>
+    </div>
+
+    <div class="projects__section" id="projects__section">
+        <div class="projects__section__image" style="background-size: cover; background-position: center;" src="main.js"></div>
+        <!-- Cool slideshow thing -->
+        <section id="projects__slider">
+        <div class="container">
+            <!-- Panel 1: Card Games -->
+            <div class="subcontainer">
+                <div class="slider__wrapper">
+                    <div>
+                        <h2>My Projects</h2>
+                    </div>
+                    <br>
+                    <div class="my__slider">
+                        <div>
+                            <div class="slide">
+                                <div class="slide__image img__one">
+                                    <a href="https://github.com/jzuckerman1/CardGames.git" target="_blank">Learn More</a>
+                                </div><br>
+                                <div>
+                                    <h3>Card Games</h3>
+                                    <p>Coded in Java</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide__image img__two">
+                                    <a href="https://github.com/jzuckerman1/QuickConnections.git" target="_blank">Learn More</a>
+                                </div><br>
+                                <div>
+                                    <h3>Quick Connections</h3>
+                                    <p>Coded in Python</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide__image img__three">
+                                    <a href="https://github.com/jzuckerman1/websiteResume.git" target="_blank">Learn More</a>
+                                </div><br>
+                                <div>
+                                    <h3>Resume Website</h3>
+                                    <p>Coded with HTML, CSS, and JS</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide__image img__four">
+                                <a href="https://github.com/jzuckerman1/jPhysics.git" target="_blank">Learn More</a>
+                            </div><br>
+                            <div>
+                                <h3>Ball Physics</h3>
+                                <p>Coded in Java</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>  
+
+    <div class="get__in__touch" id="contact__section">
+        <div class="contact__background__image" style="background-size: cover; background-position: center;"></div>
+        <h1>
+            My links:
+        </h1><br>
+        <!-- Add font awesome icons -->
+        <a class="fa fa-linkedin fa-2x" href="https://www.linkedin.com/in/jameszuckerman/ " target="_blank" style="display:inline; cursor: pointer;"></a>
+        <a href="https://github.com/jzuckerman1" class="fa fa-github fa-2x" target="_blank" style="display:inline;"></a>
+        <a href="mailto:jameszuckerman3@gmail.com" class="fa fa-envelope fa-2x" target="_blank" style="display:inline;"></a>
+        <br>
+        <p>
+            Currently interested in Summer 2024 Internship opportunities.
+        </p>
+        <div class="form__container">
+            <form action="https://formsubmit.co/jameszuckerman3@gmail.com" method="POST">
+                <h2>Contact me:</h2><br>
+                <input type="text" id="name" name="name" placeholder="Full Name" onfocus="this.placeholder=''" onblur="this.placeholder='Full Name'" required>
+                <input type="text" id="name" name="email" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'" required><br>
+                <textarea name="Message" placeholder="Message" required onfocus="this.placeholder=''" onblur="this.placeholder='Message'" maxlength="1024" rows=5 cols=120 required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <svg width="0" height="0" class="hidden" viewBox="0 0 116.93 122.88">
+        <symbol 
+        id="card_games_spade"
+         xmlns="http://www.w3.org/2000/svg">
+            <path d="M62.61,91.7a35.65,35.65,0,0,0,5.2,5.22c17.88,14.5,43.85,5.1,48.52-17.79a26.74,26.74,0,0,0-.27-12.43c-2.17-7.89-9.4-15.88-17.15-23.19-3.71-3.5-7.27-6.76-10.77-10C77.7,23.73,66.06,12.12,58.47,0h0C50.87,12.12,39.23,23.73,28.79,33.48c-3.5,3.27-7.06,6.53-10.77,10C10.27,50.82,3,58.81.87,66.7A26.74,26.74,0,0,0,.6,79.13C5.27,102,31.24,111.42,49.12,96.92A35.68,35.68,0,0,0,54.88,91c-5.41,12.62-13,21.27-23.79,25.27v6.62h55v-6.62C75.47,112.33,68,103.93,62.61,91.7Z"/>
+        </symbol>
+    </svg>
+
+    <script src="main.js"></script>
+</body>
+</html>
