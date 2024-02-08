@@ -125,13 +125,16 @@ body {
     color: #ffffff;
     z-index: 0;
     margin-top: 0;
-    position: relative;
     padding-bottom: 200px;
+    padding-top: 20px;
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 100px), 0% 100%);
 }
 
 .main__header h1 {
-    color: #6999f0;
+    color: rgba(0, 0, 0, 0.3);
+    background-clip: text;
+    background-image: linear-gradient(90deg, rgba(24,166,155,1) 0%, rgba(9,22,121,0.8190255220417634) 33%, rgba(176,0,255,1) 100%);
+    -webkit-text-fill-color: transparent;
     font-size: 3em;
 }
 
@@ -141,7 +144,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url('file:///C:/Users/Jayme/OneDrive/Desktop/Various%20PC%20Things/Backgrounds/keyboard_and_notepad_jess_bailey.jpg');
+    background-image: url(public/assets/desktop__pen__paper__header__background.avif);
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -160,22 +163,24 @@ body {
 
 .main__header__profile__image {
     position: relative;
-    margin-top: -100px;
-    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 50%;
 }
 
 .education__section {
-    top: -101px;
+    top: 0;
     padding-left: 16vh;
+    margin-top: -101px;
     position: relative;
     text-align: left;
-    width: 100%;
-    height: 50%;
     color: #ffffff;
     clip-path: polygon(0% 100px, 100% 0%, 100% calc(100% - 100px), 0% 100%);
     z-index: 0;
     overflow: hidden; /* Ensure content doesn't overflow from the clipped area */
-    padding-top: 200px;
+    padding-top: 20vh;
     padding-bottom: 200px;
     z-index: -2;
 }
@@ -186,14 +191,157 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url('file:///C:/Users/Jayme/OneDrive/Desktop/Various PC Things/Backgrounds/cool-gray-diagonal-wallpaper.jpg');
+    background-image: url(public/assets/black__coffee_table__keyboard__education__section__image.jpg);
     background-size: cover;
     background-position: center;
     z-index: -1;
 }
 
+.education__section h2 {
+    font-size: large;
+}
+
+.education__section .vassar__education__section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 0;
+    width: 85%;
+}
+
+.education__section .vassar__education__section .vassar__education__left__side {
+    margin: 10px;
+    padding-top:20px;
+    overflow: visible;
+    text-align: left;
+}
+
+.education__section .vassar__education__section .vassar__education__right__side {
+    margin: 10px;
+    padding-top:20px;
+    text-align: right;
+}
+
+.projects__section {
+    top: 0px;
+    margin-top: -101px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 16vh;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    height: 50%;
+    color: #ffffff;
+    clip-path: polygon(0% 100px, 100% 0%, 100% calc(100% - 100px), 0% 100%);
+    z-index: 1;
+    overflow: hidden; /* Ensure content doesn't overflow from the clipped area */
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.projects__section .projects__section__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('https://media.istockphoto.com/id/868697268/photo/laptop-with-office-accessories-on-wooden-table-business-background.jpg?s=612x612&w=0&k=20&c=bWR0MF9zgE6CId9VoSOvN4TR-H10WrYK5tsX_LJ9btM=');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+/* Project section */
+#projects__slider {
+    background-color: #00000046;
+    z-index: 1;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
+}
+
+.slider__wrapper {
+    width: 70%;
+    max-width: 1600px; 
+    margin: auto;
+}
+
+.my__slider {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container {
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+}
+
+.container .subcontainer {
+    max-width: 1600px;
+    width: 100%;
+    width: 85%;
+    margin: auto;
+}
+
+.slide__image {
+    width: 100%;
+    height: 275px;
+    border-radius: 5%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    transform: 0.5s;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.slide__image:hover {
+    box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.555) inset;
+}
+
+.slide__image a{
+    opacity: 0;
+    text-decoration: none;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.slide__image:hover a{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.img__one {
+    background-image: url('https://cdn.britannica.com/95/124395-004-3B484C8B/hand-cards-trump-spades.jpg');
+}
+
+.img__two {
+    background-image: url('public/assets/quick_connections_ss.png');
+}
+
+.img__three {
+    background-image: url('https://cdn.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg');
+}
+
+@media(max-width:1600px){
+    .container {
+        width: 100%;
+    }
+}
+
 .get__in__touch {
-    top: -301px;
+    margin-top: -101px;
     position: relative;
     text-align: center;
     width: 100%;
@@ -226,7 +374,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url('file:///C:/Users/Jayme/OneDrive/Desktop/Various PC Things/Backgrounds/gray_background_with_lightd.jpg'); 
+    background-image: url('https://img.freepik.com/free-vector/elegant-dark-background-with-texture_1108-171.jpg?w=740&t=st=1704591639~exp=1704592239~hmac=37bd5db798130cd900acd55386a98acdbee626f3edcc4c1a4a5b5760ad9b916d'); 
     background-size: cover;
     background-position: center;
     z-index: -3;
