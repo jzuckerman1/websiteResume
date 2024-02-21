@@ -208,16 +208,16 @@ body {
     width: 85%;
 }
 
-.education__section .vassar__education__section .vassar__education__left__side {
+.education__section .institutions .education__left__side {
     margin: 10px;
     padding-top:20px;
     overflow: visible;
     text-align: left;
 }
 
-.education__section .vassar__education__section .vassar__education__right__side {
+.education__section .institutions .education__right__side {
     margin: 10px;
-    padding-top:20px;
+    padding-top:-20px;
     text-align: right;
 }
 
@@ -375,10 +375,15 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url('https://img.freepik.com/free-vector/elegant-dark-background-with-texture_1108-171.jpg?w=740&t=st=1704591639~exp=1704592239~hmac=37bd5db798130cd900acd55386a98acdbee626f3edcc4c1a4a5b5760ad9b916d'); 
+    background-image: url('public/assets/black_textured_background.jpg'); 
     background-size: cover;
     background-position: center;
     z-index: -3;
+}
+
+.contact__background__image::before{
+    background-color: rgba(250, 250, 250, 0.5); /* Applies tint */
+    z-index:-3;
 }
 
 /* Style all font awesome icons */
@@ -387,8 +392,8 @@ body {
     cursor: pointer;
     padding: 20px;
     font-size: 2em;
-    width: 70px;
-    margin: auto;
+    margin-right: 15px;
+    padding-right: 50px;
     text-align: left;
     text-decoration: none;
     border-radius: 50%;
@@ -473,5 +478,4 @@ textarea {
 
 textarea:focus {
     border: 4px solid rgb(57, 57, 216);
-    box-shadow: 0 0 10px gray;
 }
