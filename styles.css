@@ -7,14 +7,54 @@
     scroll-behavior: smooth;
 }
 
+#CB {
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
+@keyframes slideInFromRight {
+    0% {
+        left: 60%;
+        width: 10%;
+        opacity: 0%;
+    }
+    100% {
+        left: 0px;
+        width:100%;
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        padding-bottom: 200px;
+        opacity: 0%;
+    }
+    to {
+        padding-bottom: 0;
+        opacity: 100%;
+    }
+}
+
+.headerSlidable {
+    animation: slideInFromRight 4s;
+    animation-fill-mode: forwards;
+}
+
+.education__section .institutions {
+    animation: fadeIn 4s;
+    animation-fill-mode: forwards;
+}
+
 body {
     justify-content: center;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     overflow-x: hidden; /* nothing floating*/
     color: #cdcdcd;
+    /* This is specificed for the Hamburger Menu */
+    transition: margin 0.5s cubic-bezier(0.072, 0.2, 0.05, 1.0);
+    margin-left: 0;
 }
-
 
 .menu__toggle {
     display: block;
@@ -99,17 +139,19 @@ body {
     transition: transform 0.5s cubic-bezier(0.077, 0.2, 0.05, 1.0);
 }
 
+/* Make the sections appear */
 .menu__toggle input:checked ~ ul{
     transform: none;
 }
 
+
 .menu__link a{
     color: rgb(41, 56, 71);
-    transition: color 0.3s ease;
 }
 
 .menu__link a:hover {
-    color: orangered
+    color: orangered;
+    transition: color 0.4s ease;
 }
 
 .menu__link li {
@@ -119,7 +161,7 @@ body {
 
 .main__header {
     position: relative;
-    text-align: center;
+    text-align: left;
     width: 100%;
     height: 50%;
     color: #ffffff;
@@ -135,7 +177,10 @@ body {
     background-clip: text;
     background-image: linear-gradient(90deg, rgba(24,166,155,1) 0%, rgba(9,22,121,0.8190255220417634) 33%, rgba(176,0,255,1) 100%);
     -webkit-text-fill-color: transparent;
-    font-size: 3em;
+    font-size: 4em;
+    animation: slideInFromRight 5s;
+    animation-fill-mode: forwards;
+
 }
 
 .main__header_background__image {
@@ -146,7 +191,6 @@ body {
     left: 0;
     background-image: url(public/assets/desktop__pen__paper__header__background.avif);
     background-size: cover;
-    background-position: center;
     z-index: -1;
 }
 
@@ -166,13 +210,38 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    /* width: 50%; */
     border-radius: 50%;
+}
+
+.header__section__container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    /* grid-template-columns: 2fr 2fr; */
+    column-gap: 5px;
+}
+
+.main__header__text {
+    padding-top: 250px;
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main__header__text .b{
+    position: relative;
+    display: block;
+    color: #6999f0;
 }
 
 .education__section {
     top: 0;
-    padding-left: 16vh;
+    background-color: #232323;
+    padding-left: 10vh;
+    padding-right: 10vh;
     margin-top: -101px;
     position: relative;
     text-align: left;
@@ -206,34 +275,47 @@ body {
     grid-template-columns: 4fr 1fr;
     grid-gap: 0;
     width: 85%;
+    padding-right: 20px;
+}
+
+.education__section .institutions .education__wrapper {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 4fr 1fr;
 }
 
 .education__section .institutions .education__left__side {
-    margin: 10px;
-    padding-top:20px;
+    padding-top: 20px;
+    padding-left: 20px;
     overflow: visible;
     text-align: left;
 }
 
 .education__section .institutions .education__right__side {
-    margin: 10px;
-    padding-top:-20px;
+    padding-top: 20px;
+    padding-right: 20px;
     text-align: right;
+}
+
+.education__section .institutions p{
+    padding-left: 100px;
 }
 
 .projects__section {
     top: 0px;
+    background-color: #00491c;
     margin-top: -101px;
     margin-left: 0;
     margin-right: 0;
-    padding-left: 16vh;
+    padding-right: 12vh;
+    padding-left: 12vh;
     position: relative;
     text-align: left;
     width: 100%;
     height: 50%;
     color: #ffffff;
     clip-path: polygon(0% 100px, 100% 0%, 100% calc(100% - 100px), 0% 100%);
-    z-index: 1;
+    z-index: 0;
     overflow: hidden; /* Ensure content doesn't overflow from the clipped area */
     padding-top: 200px;
     padding-bottom: 200px;
@@ -245,46 +327,53 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url('https://media.istockphoto.com/id/868697268/photo/laptop-with-office-accessories-on-wooden-table-business-background.jpg?s=612x612&w=0&k=20&c=bWR0MF9zgE6CId9VoSOvN4TR-H10WrYK5tsX_LJ9btM=');
+    background-image: url('public/assets/Designer.jpeg');
     background-size: cover;
     background-position: center;
     z-index: -2;
 }
 
 /* Project section */
-#projects__slider {
+.projects__slider {
     background-color: #00000046;
     z-index: 1;
     height: 500px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5%;
+    width: 80%;
+    flex-direction: column;
+    margin: auto;
 }
 
 .slider__wrapper {
     width: 70%;
     max-width: 1600px; 
     margin: auto;
+    padding: 50px;
 }
 
 .my__slider {
+    display: flex;
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    max-height: 400px;
 }
 
 .container {
+    display: flex;
     max-width: 1600px;
     width: 100%;
+    text-align: center;
+    justify-content: center;
     margin: auto;
+    background-color: #160f0685;
 }
 
 .container .subcontainer {
+    display: flex;
     max-width: 1600px;
     width: 100%;
     width: 85%;
@@ -359,7 +448,7 @@ body {
 .get__in__touch h1 {
     color: #6999f0;
     font-size: 3em;
-    padding-bottom: 20px;
+    padding-bottom: 70px;
 }
 
 .get__in__touch p {
@@ -378,25 +467,28 @@ body {
     background-image: url('public/assets/black_textured_background.jpg'); 
     background-size: cover;
     background-position: center;
+    background-color: #361d1d;
     z-index: -3;
 }
 
 .contact__background__image::before{
-    background-color: rgba(250, 250, 250, 0.5); /* Applies tint */
+    background-color: rgba(230, 134, 134, 0.5); /* Applies tint */
     z-index:-3;
 }
 
 /* Style all font awesome icons */
 .fa {
-    /* size-adjust: 2em; */
+    display: flex;
     cursor: pointer;
-    padding: 20px;
-    font-size: 2em;
-    margin-right: 15px;
-    padding-right: 50px;
-    text-align: left;
-    text-decoration: none;
+    padding: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
     border-radius: 50%;
+}
+
+.link__icons {
+    position: relative;
+    margin-bottom: 70px;
 }
   
 /* Add a hover effect if you want */
@@ -425,57 +517,3 @@ body {
   color: white;
 }
 
-.form__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-input {
-    font-family: 'Times New Roman', Times, serif;
-    background: rgba(240, 240, 240, 0.692);
-    margin-bottom: 2vh;
-    background-color:transparent;
-    outline: black;
-    color: black;
-    caret-color: black;
-}
-
-input[type=text]::placeholder {
-    border: white;
-    background: rgba(240, 240, 240, 0.692);
-    text-align: center;
-    color: black;
-}
-
-input[type=text]:focus {
-    background: rgba(240, 240, 240, 0.692);
-    border: 2px solid rgb(57, 57, 216);
-    box-shadow: 0 0 10px gray;
-}
-
-input[type=submit] {
-    cursor: pointer;
-    color: black;
-    background: rgba(145, 165, 255, 0.445);
-    border-right: thin;
-    border-top: thin;
-    border-left: thin;
-    padding: 5px;
-    outline: auto;
-}
-
-textarea {
-    font-family: 'Times New Roman', Times, serif;
-    color: black;
-    background: rgba(240, 240, 240, 0.692);
-    border-right: thin;
-    border-top: thin;
-    border-left: thin;
-    padding: 5px;
-}
-
-textarea:focus {
-    border: 4px solid rgb(57, 57, 216);
-}
