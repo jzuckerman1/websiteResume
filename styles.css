@@ -281,7 +281,7 @@ body {
 .education__section .institutions .education__wrapper {
     display: grid;
     margin: 10px;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 2fr;
 }
 
 .education__section .institutions .education__left__side {
