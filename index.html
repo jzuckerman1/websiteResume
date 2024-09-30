@@ -6,12 +6,6 @@
     <title>
         James Zuckerman Resume
     </title>
-    <style>
-        .tab {
-            display: inline-block;
-            margin-left: 40px;
-        }
-    </style>
     <link rel="shortcut icon" type="image/x-icon" href="public/assets/professional_image.jpg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,7 +32,7 @@
             <!-- Menu items -->
             <ul class="menu__link" style="font-size:30px">
                 <a href="#top__of__main__page"><li>Home</li></a>
-                <a href="#education__section"><li>Education</li></a>
+                <a href="#experience__section"><li>Experience</li></a>
                 <a href="#projects__section"><li>Projects</li></a>
                 <a href="#contact__section"><li>Contacts</li></a>
             </ul>
@@ -51,21 +45,24 @@
                 <h1 id="CB">
                     James Zuckerman
                 </h1>
-                <p>
+                <p class="animate">
                     <b>Meet James:</b> A student athlete at Vassar College majoring in Computer Science and Physics with a minor in Economics. <br>
                     Discover his projects and experience below.
                 </p>
             </div>
-            <div class=image><img src="public/assets/professional_image.jpg" alt="Image of James Zuckerman" class="main__header__profile__image" style="width: 300px; height: 300px; object-fit: cover; object-position: 0% 5%; margin-top: 300px;"></div>
+            <span></span>
+            <div><img src="public/assets/professional_image.jpg" alt="Image of James Zuckerman"></div>
+            <span></span>
         </div>
     </div>
 
+    <!-- Change to experience? Include VC++, all clubs/extra cirriculars -->
     <div class="education__section" id="education__section">
         <div class="education__section__image" style="background-size: cover; background-position: center;"></div>
         <h1>
             Education
         </h1>
-        <div class="institutions">
+        <div class="institutions animate">
             <div class="education__wrapper">
                 <div class="education__left__side">
                     <h2>Vassar College</h2>
@@ -73,7 +70,7 @@
                 <div class="education__right__side">August 2022 - May 2026</div>
             </div>
             <p>
-                GPA: 3.85/4.00 
+                GPA: 3.86/4.00 
             </p>
             <p>
                 B.A. in Physics and Computer Science, minoring in Economics and Mathematics.
@@ -82,7 +79,7 @@
         <h1>
             Experience
         </h1>
-        <div class="institutions">
+        <div class="institutions animate">
             <div class="education__wrapper">
                 <div class="education__left__side">
                     <h2>Vassar College</h2> <h4> <i>Research Assistant </i></h4>
@@ -90,13 +87,14 @@
                 <div class="education__right__side">June 2024 - August 2024</div>
             </div>
             <p>
-                - Worked under Professor Juan Merlo studying Electron Beam Lithography.
+                - Modified Scanning Electron Microscope's functionality enabling compaitability for Electron Beam Lithography.
             </p>
             <p>
-                - Fit curves and classified data to understand experimental principles.
+                -Conducted 3,000+ trials of Electorn Beam Lithography, optimizing a 6-dimensional parameter space and achieving a 1.2% error rate in model predicton of 
+                total completion. Effectively reduced the setup time of the Electron Microscope by 25%.
             </p>
             <p>
-                - Developed models and presented work in standardized formatting.
+                - Co-designed and exectued 10 individual sxperimental setups, 
             </p>
             <div class="education__wrapper">
                 <div class="education__left__side">
@@ -113,67 +111,58 @@
         </div>
     </div>
 
+
     <div class="projects__section" id="projects__section">
-        <div class="projects__section__image" style="background-size: cover; background-position: center;" src="main.js"></div>
+        <h1 class="title">My Projects</h1>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button data-filter="all">Show All</button>
+            <button data-filter="py">Python</button>
+            <button data-filter="jva">Java</button>
+            <button data-filter="htmljs">Web Development</button>
+        </div>
+
+        <div class="projects__section__image"></div>
         <!-- Cool slideshow thing -->
         <section id="projects__slider">
-        <div class="container">
-            <div class="subcontainer">
-                <div class="slider__wrapper">
-                    <div class="title">
-                        <h2>My Projects</h2>
-                    </div>
-                    <br>
-                    <div class="my__slider">
-                        <!-- Panel 1: Card Games -->
-                        <div>
-                            <div class="slide">
-                                <div class="slide__image img__one">
-                                    <a href="https://github.com/jzuckerman1/CardGames.git" target="_blank">Learn More</a>
-                                </div>
-                                <div>
-                                    <h3>Card Games</h3>
-                                    <p>Coded in Java</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Panel 2: Quick Connections -->
-                        <div>
-                            <div class="slide">
-                                <div class="slide__image img__two">
-                                    <a href="https://github.com/jzuckerman1/QuickConnections.git" target="_blank">Learn More</a>
-                                </div>
-                                <div>
-                                    <h3>Quick Connections</h3>
-                                    <p>Coded in Python</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Panel 3: Website -->
-                        <div>
-                            <div class="slide">
-                                <div class="slide__image img__three">
-                                    <a href="https://github.com/jzuckerman1/websiteResume.git" target="_blank">Learn More</a>
-                                </div>
-                                <div>
-                                    <h3>Resume Website</h3>
-                                    <p>Coded with HTML, CSS, and JS</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Panel 4: Ball Physics -->
-                        <!-- <div class="slide">
-                            <div class="slide__image img__four">
-                                <a href="https://github.com/jzuckerman1/jPhysics.git" target="_blank">Learn More</a>
-                            </div>
-                            <div>
-                                <h3>Ball Physics</h3>
-                                <p>Coded in Java</p>
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
+        <div class="container animate">
+            <table>
+                <tr class="header">
+                    <th width="30%">Project Directory</th>
+                    <th width="20%">Project Name</th>
+                    <th width="30%">Description</th>
+                    <th width="20%">Tags</th>
+                </tr>
+                <tr class="project py">
+                    <th><a href="https://github.com/jzuckerman1/QuickConnections" target="_blank"><img src="public\assets\quick_connections_ss.png"></a></th>
+                    <th><h4>Quick Conections Project</h4></th>
+                    <th><p>Working to brute force the Wondering Trader problem. This project focuses on 
+                        the effectiveness of various methods that execute with a much quicker runtime in
+                        comparison to the brute force method. </p></th>
+                    <th>Python, Data Analysis</th>
+                </tr>
+                <tr class="project py">
+                    <th><a href="https://github.com/jzuckerman1/MarketPredictor" target="_blank"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7faadc55496297.59872ab7a8d91.jpg"></a></th>
+                    <th><h4>Market Predictor Project</h4></th>
+                    <th><p>Worked with a team to develop a predictor for S&P500 market movement. We used speeches
+                         given from the Federal Reserve Board members
+                    </p></th>
+                    <th>Python, Data Analysis</th>
+                </tr>
+                <tr class="project jva">
+                    <th><a href="https://github.com/jzuckerman1/CardGames" target="_blank"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7faadc55496297.59872ab7a8d91.jpg"></a></th>
+                    <th><h4>Card Games Project</h4></th>
+                    <th><p>Quick Explanation on Quick Connections</p></th>
+                    <th>Java, Software Development</th>
+                </tr>
+                <tr class="project htmljs">
+                    <th><a href="https://github.com/jzuckerman1/websiteResume" target="_blank"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7faadc55496297.59872ab7a8d91.jpg"></a></th>
+                    <th><h4>Website Resume Project</h4></th>
+                    <th><p>Quick Explanation on Quick Connections</p></th>
+                    <th>Web Development, Front-End</th>
+                </tr>
+            </table>
         </div>
     </section>
     </div>  
@@ -181,14 +170,36 @@
     <div class="get__in__touch" id="contact__section">
         <div class="contact__background__image" style="background-size: cover; background-position: center;"></div>
         <h1>
-            My links
+            Get in touch
         </h1>
-        <!-- Add font awesome icons -->
-        <div class="link__icons">
-            <a class="fa fa-linkedin fa-2x" href="https://www.linkedin.com/in/jameszuckerman/ " target="_blank" style="display:inline; cursor: pointer;"></a>
-            <a href="https://github.com/jzuckerman1" class="fa fa-github fa-2x" target="_blank" style="display:inline;"></a>
-            <a href="mailto:jameszuckerman3@gmail.com" class="fa fa-envelope fa-2x" target="_blank" style="display:inline;"></a>
-        </div>
+        <section class="split animate">
+            <section>
+                <ul class="contact">
+                    <h2>Address</h2>
+                    <br>
+                    <span>
+                        James Zuckerman
+                        <br>
+                        124 Raymond Avenue
+                        <br>
+                        Vassar College, Box 2332
+                        <br>
+                        Poughkeepsie, NY 12604
+                    </span>
+                </ul>
+            </section>
+            <section>
+                <h2>Email</h2>
+                <ul>
+                    <a class="email" href=mailto:jameszuckerman3@gmail.com target="_blank">jameszuckerman3@gmail.com</a>
+                </ul>
+                <h2>Other</h2>
+                <ul style="display: inline">
+                    <a href="https://www.linkedin.com/in/jameszuckerman/ " class="link__icons fa fa-linkedin fa-2x" target="_blank"></a>
+                    <a href="https://github.com/jzuckerman1" class="link__icons fa fa-github fa-2x" target="_blank"></a>
+                </ul>
+            </section>
+        </section>
     </div>
 
     <script src="main.js"></script>
