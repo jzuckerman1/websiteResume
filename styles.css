@@ -11,6 +11,18 @@
     animation-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    .header__section__container img {
+        width: 90vw; /* Adjust width for smaller screens */
+        height: 90vw; /* Keep height equal to width for a perfect circle */
+        max-width: none; /* Remove max-width constraint */
+        max-height: none; /* Remove max-height constraint */
+        margin-top: 10px; /* Adjust top margin */
+    }
+}
+
+
 @keyframes slideInFromRight {
     0% {
         left: 60%;
@@ -234,23 +246,24 @@ body {
 .header__section__container {
     display: flex;
     align-items: center; 
-    justify-content: space-between;
-    gap: 5px;
+    justify-content: center;
+    gap: 10px;
 }
 
 .header__section__container img {
     position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    width: 300px; 
-    height: 300px; 
-    object-fit: cover;
-    object-position: 0% 5%;
-    margin-top: 300px;
+    display: block; /* Center image */
+    border-radius: 50%; /* Keep it circular */
+    width: 30vw; /* Use viewport width for responsiveness */
+    height: 30vw; /* Keep height equal to width for a perfect circle */
+    max-width: 300px; /* Set a maximum width */
+    max-height: 300px; /* Set a maximum height */
+    object-fit: cover; /* Maintain aspect ratio */
+    object-position: center; /* Center the image */
+    margin-top: 20px; /* Adjust margin */
     transition: transform 0.6s; /* Smooth transition */
 }
+
 
 .header__section__container span {
     width: 5%;
@@ -406,18 +419,18 @@ body {
     padding: 10px 15px;
     margin: 0 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1em;
     background: none;
-    color: #333;
+    color: #f1f1f1;
     border: none;
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease-in-out;
-    font-family: 'Arial', sans-serif; /* Choose a modern font */
+    font-family: 'Times', sans-serif;
 }
 
-.projects__section .filter-buttons button:hover, button.active {
-    border-bottom: 2px solid #009688; /* Change this color to your brand color */
-    color: #009688; /* Text color change on hover */
+.projects__section .filter-buttons button:hover, .projects__section .filter-buttons button:hover button.active {
+    border-bottom: 2px solid #009688;
+    color: #009688; 
 }
 
 .projects__section .filter-buttons button:focus {
@@ -429,7 +442,6 @@ body {
 .projects__section .project {
     height: 25vh;
     padding-top: 50%;
-    /* color: blue; */
 }
 
 .projects__section .project img {
