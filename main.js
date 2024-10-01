@@ -3,26 +3,28 @@
 function initializeNameGradientEffect() {
     const nameElement = document.querySelector('.main__header__text h1');
 
-    // Function to update the gradient based on mouse position relative to the element
-    function nameColorGradientUpdate(event) {
-        const windowWidth = window.innerWidth;
+// Function to update the gradient based on mouse position relative to the element
+function nameColorGradientUpdate(event) {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
 
-        const mouseX = event.clientX;
-        const percentageX = (mouseX / windowWidth) * 100;
+    // Calculate percentages for mouse position within the window
+    const percentageX = (mouseX / windowWidth) * 255;
+    const percentageY = (mouseY / windowHeight) * 255;
+    const averageXY = (percentageX + percentageY) / 2;
 
-        const angle = (percentageX / 100) * 360; 
+    // Update the background gradient of the name element using calculated percentages
+    nameElement.style.backgroundImage = `linear-gradient(90deg, rgba(${percentageX}, ${percentageY}, ${averageXY}, 1), rgba(${percentageY}, ${percentageX}, ${percentageX}, 1))`;
+}
 
-        // Update the background gradient of the name element
-        nameElement.style.backgroundImage = `linear-gradient(${angle}deg, rgba(24,166,155,1) 0%, rgba(9,22,121,0.8190255220417634) 33%, rgba(176,0,255,1) 100%)`;
-    }
-
-    window.addEventListener('mousemove', nameColorGradientUpdate);
+window.addEventListener('mousemove', nameColorGradientUpdate);
 }
 
 function initializePictureFlip() {
     const imageElement = document.querySelector('.header__section__container img');
 
-    // Function to trigger the flip animation
     function triggerFlip() {
         imageElement.classList.add('flip');
 
@@ -32,12 +34,10 @@ function initializePictureFlip() {
         }, { once: true }); // { once: true } ensures the listener is removed after firing once
     }
 
-    // Trigger the flip animation when the page loads
     window.addEventListener('load', () => {
         triggerFlip();
     });
 
-    // Trigger the flip animation when the image is clicked
     imageElement.addEventListener('click', () => {
         triggerFlip();
     });
@@ -49,17 +49,15 @@ function initializeFadeInUp() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add the fade-in-up class when the element is in view
                 entry.target.classList.add('fade-in-up');
             } else {
                 // Remove the animation class and reset styles when the element is out of view
                 entry.target.classList.remove('fade-in-up');
-                entry.target.style.opacity = '0'; // Reset opacity
+                entry.target.style.opacity = '0';
             }
         });
     });
 
-    // Observe each element
     animateElements.forEach(element => {
         observer.observe(element);
     });
